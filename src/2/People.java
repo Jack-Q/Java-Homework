@@ -28,6 +28,16 @@ public class People {
 		
 		Faculty[] faculties = new Faculty[2];
 		faculties[0] = ("ERIN", "XJTU", "888-88888888", "***@***.com", )
+		System.out.println(Arrays.toString(faculties));
+		Arrays.sort(faculties);
+		System.out.println(Arrays.toString(faculties));
+		
+		Staff[] staff = new Staff[2];
+		staff[0] = new Staff("ERIN", "XJTU", "888-88888888", "***@***.com", "1-106",8924, new MyDate(1996, 9, 1), "manager");
+		staff[1] = new Staff("ARIN", "XJTU", "888-88888888", "***@***.com", "1-106",8924, new MyDate(1996, 9, 1), "clerk");
+		System.out.println(Arrays.toString(staff));
+		Arrays.sort(staff);
+		System.out.println(Arrays.toString(staff));
 	}
 }
 
@@ -123,7 +133,7 @@ class Faculty extends Employee{
 		this("", "", "", "", "", 0, new MyDate(), 0, "");
 	}
 	public String toString(){
-		return "This faculty named" + getName();
+		return "This faculty named " + getName();
 	}
 	public int compareTo(Faculty other){
 		return getName().compareTo(other.getName());
@@ -141,7 +151,7 @@ class Staff extends Employee{
 		this("", "", "", "", "",0, new MyDate(), ""); 
 	}
 	public String toString(){
-		return "This faculty named" + getName();
+		return "This faculty named " + getName();
 	}
 	public int compareTo(Staff other){
 		return getName().compareTo(other.getName());
@@ -160,4 +170,3 @@ class MyDate{
 	}
 	private int year,month,day;
 }
-
