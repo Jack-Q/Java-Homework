@@ -27,7 +27,8 @@ public class People {
 		System.out.println(Arrays.toString(employees));
 		
 		Faculty[] faculties = new Faculty[2];
-		faculties[0] = ("ERIN", "XJTU", "888-88888888", "***@***.com", )
+		faculties[0] = new Faculty("ERIN", "XJTU", "888-88888888", "***@***.com", "1-106",8924, new MyDate(1996, 9, 1), 35, "high");
+		faculties[1] = new Faculty("ARIN", "XJTU", "888-88888888", "***@***.com", "1-106",8924, new MyDate(1996, 9, 1), 35, "middle");
 		System.out.println(Arrays.toString(faculties));
 		Arrays.sort(faculties);
 		System.out.println(Arrays.toString(faculties));
