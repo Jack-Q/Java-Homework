@@ -1,8 +1,8 @@
 # Java-Homework
 XJTU-SE-2014 Java Homework
 ## Contributor List: 
-+ 陈铮 `Heley Chen`
-+ 吕卿朴 `Erin.L`
++ 陈铮 (Heley) `zccz14`
++ 吕卿朴 (Erin) `ErinLq`
 
 ***
 开源Java作业，仅供参考  
