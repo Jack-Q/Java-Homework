@@ -19,7 +19,7 @@ public class AccountTest{
 
 class Account{
 	//constructors:
-	//constructor #0 :the ’hide‘ common constructor
+	//constructor #0 :let's hide the common constructor
 	private Account(int id,double balance, Date dateCreated, String name, ArrayList<Transaction> transactions){
 		this.id = id;
 		this.balance = balance;
@@ -79,7 +79,7 @@ class Account{
 	//the general methods
 	public Account withdraw(double amount, String description){
 		//Todo something here to guarantee the balance none-negative
-		//if it's possible to happened, the program won't do anything
+		//if it's possible, the program won't do anything
 		if(this.balance < amount) return this;
 		this.balance -= amount;
 		this.transactions.add(new Transaction('W', amount, this.balance, description));
@@ -104,12 +104,13 @@ class Account{
 		System.out.println("+ Annual: " + getAnnualInterestRate());
 		System.out.println("+ Monthly: " + getMonthlyInterestRate());
 		System.out.println("Transactions:");
+		//to do something here to get a better format
 		System.out.println(String.valueOf(transactions));
 		return this;
 	}
 
-	private int id = 0;
-	private double balance = 0;
+	private int id;
+	private double balance;
 	private static double annualInterestRate = 0;
 	private Date dateCreated;
 	private String name;
