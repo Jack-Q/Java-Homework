@@ -78,6 +78,9 @@ class Account{
 	}
 	//the general methods
 	public Account withdraw(double amount, String description){
+		//Todo something here to guarantee the balance none-negative
+		//if it's possible to happened, the program won't do anything
+		if(this.balance < amount) return this;
 		this.balance -= amount;
 		this.transactions.add(new Transaction('W', amount, this.balance, description));
 		return this;
