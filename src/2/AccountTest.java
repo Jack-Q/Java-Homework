@@ -37,10 +37,11 @@ class Account{
 	}
 	//constructor #3: default : call the constructor #2
 	public Account(){
-		this(0,0);
+		this(0, 0);
 	}
 	//the accessor methods
 	public int getId(){
+		//由于String对象存储的特殊性(String公共Trie树)，直接返回String对象并不会破坏封装性。
 		return this.id;
 	}
 	public String getName(){
